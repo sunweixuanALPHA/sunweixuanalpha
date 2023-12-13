@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东十三609主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(images/image2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 30px;
+        }
+        
+        nav {
+            background-color: #666;
+            padding: 1em;
+            opacity: 0.8;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        section {
+            padding: 7em;
+            text-align: center;
+            color: aliceblue;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 60px;
+        }
+        
+        h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+        
+        p {
+            text-align: center;
+            text-emphasis: inherit;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>寝室主页</h1>
+        <img width="20%" src="images/image19.jpeg">
+        <img width="25%" src="images/image20.png">
+        <p>————本寝室两大下属企业————</p>
+    </header>
+
+    <nav>
+        <a href="#home">班级主页</a>
+        <br>
+        <a href="https://sunweixuanalpha.github.io/sunweixuan.github.io/index.html">孙为轩(寝室长)<br></a>
+        <a href="https://liaosiming050401.github.io/">廖思明</a>
+        <br>
+        <a href="https://remygred.github.io">刘世峰</a>
+        <br>
+        <a href="https://lansong6.github.io/lansong.github.io/">蓝松</a>
+    </nav>
+
+    <section id="home">
+        <h2>欢迎来到东十三609寝室主页</h2>
+        <p>
+            本宿舍又名沁苑学生活动中心，因其中经常性举办狼人杀、阿瓦隆、和平精英、原神抽卡直播等娱乐活动而得名,有米哈游、游卡两大下属企业。坐落于华中科技大学东区十三舍，占地面积约30平方米，地理位置得天独厚，可谓钟灵毓秀的风水宝地。四名舍友有如下优点：<br><br> 1.关系和睦（指疯狂嘲笑非酋舍友）
+            <br>2.积极上进（指启动到凌晨）<br>3.热情好客（指不给别的同学开门）<br> 4.卫生习惯良好（指从来没拖过地）
+        </p>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 东十三609主页</p>
+    </footer>
+
+    <script>
+        // JavaScript代码，用于实现页面之间的切换
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 显示特定的页面
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // 默认显示首页
+        showPage('home');
+
+        // 监听导航链接的点击事件，并调用showPage函数
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('click', functio n(e) {
+                e.preventDefault();
+                showPage(link.getAttribute('href').substring(1));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
